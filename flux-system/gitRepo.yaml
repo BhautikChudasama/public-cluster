@@ -6,3 +6,30 @@ metadata:
 spec:
   interval: 1m
   url: git@github.com:BhautikChudasama/public-cluster.git
+  
+---
+
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: public-cloud-image-auto-mation
+  namespace: fluxcd
+spec:
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: public-cloud
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        email: fluxcdbot@users.noreply.github.com
+        name: fluxcdbot
+      messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
+    push:
+      branch: main
+  update:
+    strategy: Setters
+    
