@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: subdomain-demo
-  namespace: subdomain
+  namespace: f-test
 spec:
   selector:
     matchLabels:
