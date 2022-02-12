@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: subdomain-demo
+  namespace: test-ns
+spec:
+  selector:
+    matchLabels:
+      app: test-ns
+  template:
+    metadata:
+      labels:
+        app: test-ns
+    spec:
+      containers:
+      - name: subdomain
+        image: bhautikchudasama/subdomain:success
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3000
