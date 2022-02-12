@@ -4,7 +4,7 @@ metadata:
   name: subdomain-image-repo
   namespace: fluxcd
 spec:
-  image: tl.sh/bhtk-subdomain
+  image: ttl.sh/bhtk-subdomain
   interval: 1m0s
 
 ---
