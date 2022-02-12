@@ -17,7 +17,7 @@ spec:
         image: bhautikchudasama/subdomain:success
         resources:
           limits:
-            memory: "228Mi"
+            memory: "200Mi"
             cpu: "100m"
         ports:
         - containerPort: 3000
