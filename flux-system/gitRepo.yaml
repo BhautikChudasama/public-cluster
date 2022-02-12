@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: public-cloud
+  namespace: fluxcd
+spec:
+  interval: 1m
+  url: git@github.com:BhautikChudasama/public-cluster.git
