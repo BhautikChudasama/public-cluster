@@ -5,7 +5,7 @@ metadata:
   namespace: fluxcd
 spec:
   interval: 1m
-  url: ssh://git@github.com:BhautikChudasama/public-cluster.git
+  url: ssh://git@github.com/BhautikChudasama/public-cluster.git
   
 ---
 
