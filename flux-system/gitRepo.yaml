@@ -7,7 +7,7 @@ spec:
   interval: 1m
   url: ssh://git@github.com/BhautikChudasama/public-cluster
   secretRef:
-    name: flux-git-deploy
+    name: gitsecret-flux
   
 ---
 
