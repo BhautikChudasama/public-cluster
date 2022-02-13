@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: subdomain
-        image: ttl.sh/bhtk-subdomain:success # {"$imagepolicy": "fluxcd:subdomain-image-repo-policy"}
+        image: ttl.sh/bhtk-subdomain:master-aabbcc-1644729875044 # {"$imagepolicy": "fluxcd:subdomain-image-repo-policy"}
         resources:
           limits:
             memory: "128Mi"
